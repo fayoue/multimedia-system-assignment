@@ -1,0 +1,99 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia Systems | Faith Muthini</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    body { font-family: 'Inter', sans-serif; margin: 0; background: #f8fafc; color: #333; }
+    header { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; text-align: center; padding: 60px 20px; }
+    nav { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    nav ul { display: flex; justify-content: center; list-style: none; padding: 15px 0; flex-wrap: wrap; }
+    nav a { color: #1e3a8a; text-decoration: none; padding: 12px 20px; font-weight: 500; }
+    nav a:hover { background: #eff6ff; border-radius: 6px; }
+
+    section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+    .card { background: white; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 35px; margin-bottom: 40px; }
+    img, video { width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+
+    .placeholder { color: #666; font-style: italic; text-align: center; margin-top: 15px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Multimedia Systems</h1>
+    <p>Assignment by Faith Muthini</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#text">Text</a></li>
+      <li><a href="#image">Image</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#animation">Animation</a></li>
+      <li><a href="#graphics">Graphics</a></li>
+    </ul>
+  </nav>
+
+  <section id="text">
+    <div class="card">
+      <h2>1. Text Component</h2>
+      <p>A multimedia system is a computer system that compines two or more of media elements such as text,image,graphics,video,audio and animation to create rich,interactive content for better communication and user engagement.</p>
+    </div>
+  </section>
+
+  <section id="image">
+    <div class="card">
+      <h2>2. Image Component</h2>
+      <img src="https://picsum.photos/id/237/800/500" alt="Cute Dog">
+      <p class="placeholder">https://picsum.photos/id/237/800/500" alt="Cute Dog</p>
+    </div>
+  </section>
+
+  <section id="video">
+    <div class="card">
+      <h2>3. Video Component</h2>
+      <!-- Replace with your own video link -->
+      <video controls width="100%">
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="placeholder">video with autoplay(muted so it can pay aotomatically)</p> 
+  </section>
+
+  <section id="animation">
+    <div class="card">
+      <h2>4. Animation Component</h2>
+      <div style="height: 300px; background: linear-gradient(45deg, #3b82f6, #1e40af); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+        <div style="width: 180px; height: 180px; background: white; border-radius: 50%; animation: spin 5s linear infinite;"></div>
+      </div>
+      <p class="placeholder">CSS Animation</p>
+    </div>
+  </section>
+
+  <section id="graphics">
+    <div class="card">
+      <h2>5. Graphics Component</h2>
+      <canvas id="canvas" width="800" height="400" style="width:100%; border-radius:12px;"></canvas>
+      <p class="placeholder">HTML5 Canvas Graphics</p>
+    </div>
+  </section>
+
+  <script>
+    const c = document.getElementById("canvas");
+    const ctx = c.getContext("2d");
+    ctx.fillStyle = "#f0f9ff";
+    ctx.fillRect(0, 0, c.width, c.height);
+    ctx.fillStyle = "#1e40af";
+    ctx.fillRect(100, 150, 200, 150);
+    ctx.beginPath();
+    ctx.arc(550, 200, 100, 0, Math.PI*2);
+    ctx.fillStyle = "#3b82f6";
+    ctx.fill();
+  </script>
+
+</body>
+</html>
